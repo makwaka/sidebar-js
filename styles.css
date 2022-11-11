@@ -41,7 +41,7 @@ margin: 15px;
     background: var(--sidebar-background);
     display: grid;
     grid-template-rows: auto 1fr auto;
-    row-gap: 1rem;
+    row-gap: 2rem;
     /* Remove sidebar to be added in JS when show sidebar below will be added */
     transform: translate(-100%);
 
@@ -71,13 +71,13 @@ margin: 15px;
     text-decoration: none;
     text-transform: uppercase;
     color:var(--sidebar-links-color);
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .links a:hover{
    
     color: var(--social-icons-color);
-    background: red;
+    background: rgb(49, 59, 71);
     border-radius: 10px;
     font-size: 25px; 
    transition: all 0.4s linear;
