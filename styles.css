@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+:root{
+    --body-background:rgb(194, 214, 213);
+    --sidebar-background:#ffffff;
+    --sidebar-links-color:#03a47e;
+    --social-icons-color:dodgerblue;
+}
+
+.logo{
+    margin: 20px;
+    width:30%;
+  
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background:var(--body-background) ;
+}
+
+.sidebar-toggle{
+float: right;
+font-size: 30px;
+margin: 15px;
+}
+
+.sidebar{
+    list-style: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--sidebar-background);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    /* Remove sidebar to be added in JS when show sidebar below will be added */
+    transform: translate(-100%);
+
+}
+/* This class will be called in JS and a toggle for remove and add or show-sidebar */
+.show-sidebar{
+    transform: translate(0);
+}
+
+/* Mobile responsiveness  to reduce the size of sidebar. When the width is below 676px, use sidebar full size. Anything bigger than that, reduce width to 400px*/
+@media screen and (min-width:676px){
+    .sidebar{
+        width:400px
+    }
+}
+
+.close-btn{
+    float: right;
+    font-size: 20px;
+    margin: 10px 5px;
+}
+
+.links a{
+    margin-bottom: 30px;
+    font-size: 20px; 
+    line-height: 80px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--sidebar-links-color);
+    margin-left: 10px;
+}
+
+.links a:hover{
+   
+    color: var(--social-icons-color);
+    background: red;
+    border-radius: 10px;
+    font-size: 25px; 
+   transition: all 0.4s linear;
+
+}
+
+.social-icons{
+    display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+justify-content: space-between;
+margin: 10px;
+font-size: 25px;
+
+}
+
+.social-icons a{
+    border:solid var(--social-icons-color);
+    border-radius: 100%;
+    background: white;
+    color:var(--social-icons-color);
+}
+
+.social-icons a:hover{
+background: linear-gradient(to left, white, green );
+}
