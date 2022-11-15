@@ -10,6 +10,8 @@
     --sidebar-background:#ffffff;
     --sidebar-links-color:#03a47e;
     --social-icons-color:dodgerblue;
+       --social-icons-hover-color:orange;
+
 }
 
 .logo{
@@ -76,7 +78,7 @@ margin: 15px;
 
 .links a:hover{
    
-    color: var(--social-icons-color);
+    color: var(--social-icons-hover-color);
     background: rgb(49, 59, 71);
     border-radius: 10px;
     font-size: 25px; 
@@ -103,5 +105,5 @@ font-size: 25px;
 }
 
 .social-icons a:hover{
-background: linear-gradient(to left, white, green );
+background: linear-gradient(to left, red, blue );
 }
